@@ -99,7 +99,9 @@ function init(){
     closeCookie();
     tabActive();
     mobileMenu();
-    getData('tab1');
+    setTimeout(function (){
+        getData('tab1');
+    }, 1500);
     animatedScroll();
 
     $('.invia').click(function(){

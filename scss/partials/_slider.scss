@@ -4,10 +4,20 @@
         width: 100%;
         position: relative;
 
+        @media screen and (max-width: 600px){
+            height: 100vh;
+        }
+
         img{
             width: 100%;
             height: auto;
             min-height: 460px;
+
+            @media screen and (max-width: 600px){
+                height: 100vh;
+                object-fit: cover;
+                object-position: center;
+            }
         }
 
         .slider-text{

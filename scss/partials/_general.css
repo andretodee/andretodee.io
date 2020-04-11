@@ -4,9 +4,9 @@
   box-sizing: border-box;
   font-family: "Gotham", sans-serif; }
 
-header, main {
+header, main, footer {
   width: 100vw; }
-  header > .container, main > .container {
+  header > .container, main > .container, footer > .container {
     width: 100%; }
 
 /*# sourceMappingURL=_general.css.map */

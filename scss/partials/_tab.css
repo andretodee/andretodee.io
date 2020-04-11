@@ -32,7 +32,7 @@
         .tab .tab-title .tab-name p {
           font-size: 12px; } }
       .tab .tab-title .tab-name.active {
-        background: black;
+        background: grey;
         color: lightgrey; }
         .tab .tab-title .tab-name.active .fa-angle-up {
           transform: rotate(180deg); }
@@ -49,5 +49,8 @@
     .tab .tab-text p {
       font-size: 14px;
       line-height: 1.5; }
+      @media screen and (max-width: 1024px) {
+        .tab .tab-text p {
+          font-size: 12px; } }
 
 /*# sourceMappingURL=_tab.css.map */

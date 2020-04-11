@@ -43,7 +43,7 @@
             }
 
             &.active{
-                background: black;
+                background: grey;
                 color: lightgrey;
 
                 .fa-angle-up{
@@ -71,6 +71,10 @@
         p{
             font-size: 14px;
             line-height: 1.5;
+
+            @media screen and (max-width: 1024px){
+                font-size: 12px;
+            }
         }
     }
 }

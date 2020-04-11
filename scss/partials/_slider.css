@@ -1,10 +1,18 @@
 .slider .slider-img {
   width: 100%;
   position: relative; }
+  @media screen and (max-width: 600px) {
+    .slider .slider-img {
+      height: 100vh; } }
   .slider .slider-img img {
     width: 100%;
     height: auto;
     min-height: 460px; }
+    @media screen and (max-width: 600px) {
+      .slider .slider-img img {
+        height: 100vh;
+        object-fit: cover;
+        object-position: center; } }
   .slider .slider-img .slider-text {
     position: absolute;
     top: 55%;
