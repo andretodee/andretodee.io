@@ -79,8 +79,8 @@ function slider(){
 
             var textArray = json.item.content;
             var finalText = textArray.toString();
-            
-            seTimeout(function(){
+
+            setTimeout(function(){
                 $('.tab-text > p').html(finalText);
             }, 1500);
         });
