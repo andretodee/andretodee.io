@@ -78,10 +78,11 @@ function slider(){
         $.getJSON("./ajax-json/" + path + ".json", function(json) {
 
             var textArray = json.item.content;
-
             var finalText = textArray.toString();
-
-            $('.tab-text > p').html(finalText);
+            
+            seTimeout(function(){
+                $('.tab-text > p').html(finalText);
+            }, 1500);
         });
     };
 
@@ -99,9 +100,7 @@ function init(){
     closeCookie();
     tabActive();
     mobileMenu();
-    setTimeout(function (){
-        getData('tab1');
-    }, 1500);
+    getData('tab1');
     animatedScroll();
 
     $('.invia').click(function(){
