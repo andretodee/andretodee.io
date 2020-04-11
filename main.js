@@ -171,7 +171,7 @@ function init(){
     closeCookie();
     tabActive();
     mobileMenu();
-    getData(tab1);
+    getData('tab1');
 
     // var doc = $(document);
     // doc.on('click','.tab-name', tabActive)
