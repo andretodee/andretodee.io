@@ -1,0 +1,118 @@
+.banner{
+    position: relative;
+    margin-top: -5px;
+
+    .banner-img{
+        width: 100%;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .banner-text-background{
+        width: 42%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+
+        @media screen and (max-width: 775px){
+            position: relative;
+            width: 100%;
+            height: 350px;
+            border-bottom: 1px solid lightgrey;
+            margin-top: -5px;
+        }
+
+        .banner-text{
+            width: 37%;
+            margin:0 10%;
+
+            h2{
+                font-size: 70px;
+                line-height: 1;
+
+                @media screen and (max-width: 600px){
+                    font-size: 50px;
+                }
+
+            }
+
+            p{
+                margin: 25px 0;
+                line-height: 1.7;
+                font-size: 14px;
+
+                @media screen and (max-width: 1024px){
+                    font-size: 12px;
+                }
+            }
+
+            .banner-button{
+                padding: 15px 20px;
+                background: transparent;
+
+                @media screen and (max-width: 1024px){
+                    padding: 10px 15px;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 14px;
+
+                    @media screen and (max-width: 1024px){
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+
+    .banner-text-background.right{
+        background: black;
+        color: white;
+        right: 0;
+        justify-content: flex-start;
+
+        .banner-text{
+
+            p{
+                color:lightgrey;
+            }
+
+            .banner-button{
+                border: 1px solid white;
+
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .banner-text-background.left{
+        background: white;
+        color: black;
+        left: 0;
+        justify-content: flex-end;
+
+        .banner-text{
+            text-align: right;
+
+            p{
+                color:black;
+            }
+
+            .banner-button{
+                border: 1px solid black;
+
+                a{
+                    color: black;
+                }
+            }
+        }
+    }
+}

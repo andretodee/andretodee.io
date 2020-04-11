@@ -1,0 +1,96 @@
+.read-more{
+    padding: 75px 10%;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1150px){
+        padding: 75px 4%;
+    }
+
+    @media screen and (max-width: 1024px){
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 440px){
+        padding: 20px 0 0 0;
+    }
+
+    .card{
+        height: 353px;
+        width: 31%;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1024px){
+            width: 50%;
+            margin: 20px;
+        }
+
+        @media screen and (max-width: 768px){
+            width: 80%;
+            margin: 20px;
+        }
+
+        @media screen and (max-width: 440px){
+            width: 100%;
+            margin: 0;
+        }
+
+        .card-top{
+            width: 100%;
+            height: 25%;
+            background-position: center;
+
+            &.first{
+                background-image: url(/Users/tode/Desktop/playground-project/images/card-play-harder.png);
+            }
+
+            &.second{
+                background-image: url(/Users/tode/Desktop/playground-project/images/card-simplicity.png);
+                background-position: left;
+            }
+
+            &.third{
+                background-image: url(/Users/tode/Desktop/playground-project/images/card-innovation.png);
+            }
+        }
+
+
+
+        .card-center{
+            height: 60%;
+            padding: 40px 35px;
+
+            p{
+                text-align: center;
+                line-height: 1.5;
+                max-height: 90%;
+                overflow-y: auto;
+            }
+        }
+
+        .card-bottom{
+            background: black;
+            height: 15%;
+            display: flex;
+            text-decoration: none;
+
+            p{
+                color: white;
+                margin: auto;
+            }
+
+            &:hover{
+                p{
+                    border-bottom: 1px solid white;
+                }
+
+            }
+        }
+    }
+
+}
