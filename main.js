@@ -153,13 +153,18 @@ function slider(){
 
     function getData(path){
         $.getJSON("../ajax-json/" + path + ".json", function(json) {
+            console.log('test');
             console.log(json);
+            var textArray = json.item.content;
+
+            var finalText = textArray.toString();
+
+            $('.tab-text > p').html(finalText);
 
         });
-        var textArray = path.item.content;
 
-        var finalText = textArray.toString();
-        $('.tab-text > p').html(finalText);
+
+
 
 
     };
