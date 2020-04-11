@@ -51,7 +51,7 @@
     .navbar-wrap .navbar .fa-bars {
       cursor: pointer; }
   .navbar-wrap .navbar.scrolled {
-    background: red;
+    background: rgba(0, 0, 0, 0.9);
     border-bottom: 1px solid lightgrey;
     display: flex;
     align-items: center; }
