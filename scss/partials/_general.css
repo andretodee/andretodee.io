@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gotham", sans-serif; }
+
+header, main {
+  width: 100vw; }
+  header > .container, main > .container {
+    width: 100%; }
+
+/*# sourceMappingURL=_general.css.map */
