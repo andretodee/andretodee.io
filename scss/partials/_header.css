@@ -89,8 +89,6 @@
         color: lightgrey;
         font-size: 25px; }
       .navbar-wrap .drop-down-menu .drop-item:hover {
-        cursor: pointer;
-        background-color: lightgrey;
-        color: black; }
+        cursor: pointer; }
 
 /*# sourceMappingURL=_header.css.map */

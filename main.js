@@ -17,32 +17,13 @@ function slider(){
     });
 };
 
-// TENTATIVO DI RENDERE LE CARD UN CAROSEL SU MOBILE
-
-  // $('.read-more').slick({
-  //   arrows:true,
-  //   dots:true,
-  //   responsive: [
-  //       {
-  //         breakpoint: 440,
-  //         settings: {
-  //             slidesToShow: 1,
-  //             slidesToScroll: 1,
-  //             infinite: false
-  //           }
-  //       }
-  //   ]
-  // });
-
- // FINE TENTATIVO DI RENDERE LE CARD UN CAROSEL SU MOBILE
-
   function navabarScroll(){
-      $(window).on('scroll', function(e) { //quando vado a fare scroll con il mouse
-            st = $(this).scrollTop(); //imposto la posizione di scorrimento
-            if (st > 80) { //se la posizione di scorrimento è maggiore a 80px
-                $('.navbar').addClass('scrolled'); //cambio le proprieta  della navbar
-            } else {  //altrimenti (se faccio scroll in alto)
-                $('.navbar').removeClass('scrolled'); //rimetto le proprieta  della navbar come prima
+      $(window).on('scroll', function(e) {
+            st = $(this).scrollTop();
+            if (st > 80) {
+                $('.navbar').addClass('scrolled');
+            } else {
+                $('.navbar').removeClass('scrolled');
 
             }
       });
@@ -95,13 +76,20 @@ function slider(){
 
     function getData(path){
         $.getJSON("./ajax-json/" + path + ".json", function(json) {
-            console.log('test');
-            console.log(json);
+
             var textArray = json.item.content;
 
             var finalText = textArray.toString();
 
             $('.tab-text > p').html(finalText);
+        });
+    };
+
+    function animatedScroll(){
+        ScrollReveal().reveal('.slider *, .read-more *, .banner *, .tab *, #contact-us *, .footer  *, cookie *',{
+            duration: 250,
+            easing: 'ease-in',
+            interval: 70
         });
     };
 
@@ -112,9 +100,8 @@ function init(){
     tabActive();
     mobileMenu();
     getData('tab1');
+    animatedScroll();
 
-    // var doc = $(document);
-    // doc.on('click','.tab-name', tabActive)
     $('.invia').click(function(){
         validate();
     });

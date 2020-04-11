@@ -6,12 +6,28 @@
     position: relative;
     z-index: 100;
 
+    @media screen and (max-width: 775px){
+        padding: 75px 3%;
+    }
+
+    @media screen and (max-width: 775px){
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 440px){
+        padding: 0;
+    }
+
     .tab-title{
         width: 35%;
 
         @media screen and (max-width: 600px){
-            width: 90%;
+            width: 100%;
             justify-content: center;
+        }
+
+        @media screen and (max-width: 440px){
+            width: 100%;
         }
 
         .tab-name{
@@ -48,7 +64,7 @@
         overflow-y: auto;
 
         @media screen and (max-width: 600px){
-            display: none;
+            width: 100%;
         }
 
 

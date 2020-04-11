@@ -1,484 +1,65 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Gotham", sans-serif; }
+/*
+Error: Invalid US-ASCII character "\xE2"
+        on line 4 of /Users/tode/Desktop/playground-test/scss/partials/_slider.scss
+        from line 3 of /Users/tode/Desktop/playground-test/scss/app.scss
 
-header, main {
-  width: 100vw; }
-  header > .container, main > .container {
-    width: 100%; }
+1: .slider{
+2: 
+3:     .slick-prev::before {
+4:         content: "‹";
+5:     }
+6: 
+7: 
+8:     .slider-img{
+9:         width: 100%;
 
-.navbar-wrap {
-  position: relative;
-  z-index: 9999; }
-  .navbar-wrap .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 10%;
-    z-index: 10; }
-    @media screen and (max-width: 1024px) {
-      .navbar-wrap .navbar {
-        padding: 0 5%; } }
-    .navbar-wrap .navbar .logo, .navbar-wrap .navbar .menu {
-      height: 100%;
-      padding-top: 50px; }
-      @media screen and (max-width: 600px) {
-        .navbar-wrap .navbar .logo, .navbar-wrap .navbar .menu {
-          padding-top: 25px; } }
-    .navbar-wrap .navbar .menu {
-      text-align: right; }
-      @media screen and (max-width: 600px) {
-        .navbar-wrap .navbar .menu {
-          display: none; } }
-    .navbar-wrap .navbar .menu ul li {
-      display: inline;
-      margin-left: 75px;
-      list-style: none;
-      font-size: 14px; }
-      @media screen and (max-width: 780px) {
-        .navbar-wrap .navbar .menu ul li {
-          margin-left: 40px; } }
-      .navbar-wrap .navbar .menu ul li:hover a {
-        border-bottom: 1px solid lightgrey; }
-    .navbar-wrap .navbar .menu-item a {
-      color: lightgrey;
-      text-decoration: none; }
-    .navbar-wrap .navbar .hamburger-menu {
-      display: none;
-      color: lightgrey;
-      font-size: 25px;
-      padding-top: 40px; }
-      @media screen and (max-width: 600px) {
-        .navbar-wrap .navbar .hamburger-menu {
-          display: block;
-          padding-top: 20px; } }
-    .navbar-wrap .navbar .fa-bars {
-      cursor: pointer; }
-  .navbar-wrap .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.9);
-    border-bottom: 1px solid lightgrey;
-    display: flex;
-    align-items: center; }
-    .navbar-wrap .navbar.scrolled .logo, .navbar-wrap .navbar.scrolled .menu, .navbar-wrap .navbar.scrolled .hamburger-menu {
-      height: 100%;
-      padding-top: 30px; }
-  .navbar-wrap .drop-down-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 10px;
-    display: none; }
-    .navbar-wrap .drop-down-menu .drop-item {
-      width: 100%;
-      height: 45px;
-      background: rgba(0, 0, 0, 0.9);
-      border-bottom: 1px solid lightgrey;
-      font-size: 12px;
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-      .navbar-wrap .drop-down-menu .drop-item a {
-        color: lightgrey;
-        text-decoration: none; }
-      .navbar-wrap .drop-down-menu .drop-item i {
-        position: absolute;
-        top: 4px;
-        right: 20px;
-        color: lightgrey;
-        font-size: 25px; }
-      .navbar-wrap .drop-down-menu .drop-item:hover {
-        cursor: pointer;
-        background-color: lightgrey;
-        color: black; }
-
-.slider .slider-img {
-  width: 100%;
-  position: relative; }
-  .slider .slider-img img {
-    width: 100%;
-    height: auto;
-    min-height: 460px; }
-  .slider .slider-img .slider-text {
-    position: absolute;
-    top: 55%;
-    left: 18%;
-    transform: translateY(-55%);
-    width: 16%; }
-    @media screen and (max-width: 600px) {
-      .slider .slider-img .slider-text {
-        width: 35%; } }
-    .slider .slider-img .slider-text h2 {
-      color: white;
-      font-size: 70px;
-      line-height: 1; }
-      @media screen and (max-width: 800px) {
-        .slider .slider-img .slider-text h2 {
-          font-size: 50px; } }
-    .slider .slider-img .slider-text p {
-      color: lightgrey;
-      margin-top: 30px;
-      line-height: 1.7;
-      font-size: 14px; }
-      @media screen and (max-width: 1024px) {
-        .slider .slider-img .slider-text p {
-          font-size: 12px; } }
-.slider .slick-arrow {
-  position: absolute;
-  z-index: 10; }
-.slider .slick-prev {
-  left: 15px; }
-.slider .slick-next {
-  right: 15px; }
-.slider .slick-dots {
-  position: absolute;
-  bottom: 30px; }
-  .slider .slick-dots li {
-    margin: 0 5px; }
-    .slider .slick-dots li button::before {
-      font-size: 10px;
-      color: white; }
-  .slider .slick-dots li.slick-active button:before {
-    color: white; }
-
-.slick-dotted.slick-slider {
-  margin-bottom: 0 !important; }
-
-.read-more {
-  padding: 75px 10%;
-  background-color: lightgrey;
-  display: flex;
-  justify-content: space-between; }
-  @media screen and (max-width: 1150px) {
-    .read-more {
-      padding: 75px 4%; } }
-  @media screen and (max-width: 1024px) {
-    .read-more {
-      flex-direction: column;
-      align-items: center; } }
-  @media screen and (max-width: 440px) {
-    .read-more {
-      padding: 20px 0 0 0; } }
-  .read-more .card {
-    height: 353px;
-    width: 31%;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-    @media screen and (max-width: 1024px) {
-      .read-more .card {
-        width: 50%;
-        margin: 20px; } }
-    @media screen and (max-width: 768px) {
-      .read-more .card {
-        width: 80%;
-        margin: 20px; } }
-    @media screen and (max-width: 440px) {
-      .read-more .card {
-        width: 100%;
-        margin: 0; } }
-    .read-more .card .card-top {
-      width: 100%;
-      height: 25%;
-      background-position: center; }
-      .read-more .card .card-top.first {
-        background-image: url("../images/card-play-harder.png"); }
-      .read-more .card .card-top.second {
-        background-image: url("../images/card-simplicity.png");
-        background-position: left; }
-      .read-more .card .card-top.third {
-        background-image: url("../images/card-innovation.png"); }
-    .read-more .card .card-center {
-      height: 60%;
-      padding: 40px 35px; }
-      .read-more .card .card-center p {
-        text-align: center;
-        line-height: 1.5;
-        max-height: 90%;
-        overflow-y: auto; }
-    .read-more .card .card-bottom {
-      background: black;
-      height: 15%;
-      display: flex;
-      text-decoration: none; }
-      .read-more .card .card-bottom p {
-        color: white;
-        margin: auto; }
-      .read-more .card .card-bottom:hover p {
-        border-bottom: 1px solid white; }
-
-.banner {
-  position: relative;
-  margin-top: -5px; }
-  .banner .banner-img {
-    width: 100%; }
-    .banner .banner-img img {
-      width: 100%; }
-  .banner .banner-text-background {
-    width: 42%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    display: flex;
-    align-items: center; }
-    @media screen and (max-width: 775px) {
-      .banner .banner-text-background {
-        position: relative;
-        width: 100%;
-        height: 350px;
-        border-bottom: 1px solid lightgrey;
-        margin-top: -5px; } }
-    .banner .banner-text-background .banner-text {
-      width: 37%;
-      margin: 0 10%; }
-      .banner .banner-text-background .banner-text h2 {
-        font-size: 70px;
-        line-height: 1; }
-        @media screen and (max-width: 600px) {
-          .banner .banner-text-background .banner-text h2 {
-            font-size: 50px; } }
-      .banner .banner-text-background .banner-text p {
-        margin: 25px 0;
-        line-height: 1.7;
-        font-size: 14px; }
-        @media screen and (max-width: 1024px) {
-          .banner .banner-text-background .banner-text p {
-            font-size: 12px; } }
-      .banner .banner-text-background .banner-text .banner-button {
-        padding: 15px 20px;
-        background: transparent; }
-        @media screen and (max-width: 1024px) {
-          .banner .banner-text-background .banner-text .banner-button {
-            padding: 10px 15px; } }
-        .banner .banner-text-background .banner-text .banner-button a {
-          text-decoration: none;
-          color: white;
-          font-size: 14px; }
-          @media screen and (max-width: 1024px) {
-            .banner .banner-text-background .banner-text .banner-button a {
-              font-size: 11px; } }
-  .banner .banner-text-background.right {
-    background: black;
-    color: white;
-    right: 0;
-    justify-content: flex-start; }
-    .banner .banner-text-background.right .banner-text p {
-      color: lightgrey; }
-    .banner .banner-text-background.right .banner-text .banner-button {
-      border: 1px solid white; }
-      .banner .banner-text-background.right .banner-text .banner-button a {
-        color: white; }
-  .banner .banner-text-background.left {
-    background: white;
-    color: black;
-    left: 0;
-    justify-content: flex-end; }
-    .banner .banner-text-background.left .banner-text {
-      text-align: right; }
-      .banner .banner-text-background.left .banner-text p {
-        color: black; }
-      .banner .banner-text-background.left .banner-text .banner-button {
-        border: 1px solid black; }
-        .banner .banner-text-background.left .banner-text .banner-button a {
-          color: black; }
-
-.tab {
-  padding: 75px 10%;
-  background-color: lightgrey;
-  display: flex;
-  margin-top: -5px;
-  position: relative;
-  z-index: 100; }
-  .tab .tab-title {
-    width: 35%; }
-    @media screen and (max-width: 600px) {
-      .tab .tab-title {
-        width: 90%;
-        justify-content: center; } }
-    .tab .tab-title .tab-name {
-      width: 100%;
-      padding: 7% 15%;
-      background: rgba(128, 128, 128, 0.4);
-      margin-bottom: 2px; }
-      @media screen and (max-width: 1024px) {
-        .tab .tab-title .tab-name p {
-          font-size: 12px; } }
-      .tab .tab-title .tab-name.active {
-        background: black;
-        color: lightgrey; }
-        .tab .tab-title .tab-name.active .fa-angle-up {
-          transform: rotate(180deg); }
-      .tab .tab-title .tab-name .fa-angle-down {
-        display: none; }
-  .tab .tab-text {
-    width: 65%;
-    background: white;
-    padding: 4% 8%;
-    overflow-y: auto; }
-    @media screen and (max-width: 600px) {
-      .tab .tab-text {
-        display: none; } }
-    .tab .tab-text p {
-      font-size: 14px;
-      line-height: 1.5; }
-
-#contact-us {
-  padding: 90px 15%;
-  display: flex;
-  background: black;
-  border-bottom: 1px solid grey; }
-  @media screen and (max-width: 1150px) {
-    #contact-us {
-      padding: 75px 4%; } }
-  @media screen and (max-width: 1024px) {
-    #contact-us {
-      flex-direction: column;
-      align-items: center; } }
-  #contact-us .contact-text {
-    width: 40%;
-    color: white; }
-    @media screen and (max-width: 1024px) {
-      #contact-us .contact-text {
-        text-align: center; } }
-    @media screen and (max-width: 600px) {
-      #contact-us .contact-text {
-        width: 90%; } }
-    #contact-us .contact-text h2 {
-      font-size: 70px;
-      line-height: 1; }
-      @media screen and (max-width: 600px) {
-        #contact-us .contact-text h2 {
-          font-size: 50px; } }
-    #contact-us .contact-text p {
-      margin: 10px 0;
-      font-size: 14px;
-      color: lightgrey; }
-  #contact-us .form {
-    width: 60%; }
-    @media screen and (max-width: 1024px) {
-      #contact-us .form {
-        margin-top: 30px; } }
-    @media screen and (max-width: 600px) {
-      #contact-us .form {
-        width: 90%; } }
-    #contact-us .form input, #contact-us .form textarea {
-      background: transparent;
-      border: 1px solid white;
-      height: 40px;
-      color: grey;
-      padding: 10px;
-      font-size: 14px;
-      margin-bottom: 15px; }
-    #contact-us .form .input-wrap {
-      display: flex;
-      justify-content: space-between; }
-      @media screen and (max-width: 600px) {
-        #contact-us .form .input-wrap {
-          flex-direction: column; } }
-      #contact-us .form .input-wrap .name, #contact-us .form .input-wrap .last-name {
-        width: 48%; }
-        @media screen and (max-width: 600px) {
-          #contact-us .form .input-wrap .name, #contact-us .form .input-wrap .last-name {
-            width: 100%; } }
-    #contact-us .form .email {
-      width: 100%; }
-    #contact-us .form textarea {
-      width: 100%;
-      min-height: 155px; }
-    #contact-us .form .send-message {
-      display: flex;
-      justify-content: flex-start; }
-      @media screen and (max-width: 1024px) {
-        #contact-us .form .send-message {
-          justify-content: center; } }
-      #contact-us .form .send-message button {
-        padding: 10px 50px;
-        background: white; }
-        #contact-us .form .send-message button a {
-          text-decoration: none;
-          color: black;
-          font-size: 14px; }
-
-.footer {
-  background: black;
-  padding-top: 55px;
-  display: flex;
-  justify-content: center; }
-  .footer .footer-content .footer-img {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10%; }
-    .footer .footer-content .footer-img img {
-      max-width: 100%;
-      height: auto; }
-  .footer .footer-content .footer-menu ul li {
-    display: inline;
-    margin: 0 35px;
-    list-style: none;
-    font-size: 14px;
-    margin-bottom: 10%; }
-    @media screen and (max-width: 600px) {
-      .footer .footer-content .footer-menu ul li {
-        display: block;
-        text-align: center; } }
-    .footer .footer-content .footer-menu ul li:hover a {
-      border-bottom: 1px solid lightgrey; }
-  .footer .footer-content .menu-item a {
-    color: lightgrey;
-    text-decoration: none; }
-  .footer .footer-content .footer-icons {
-    color: grey;
-    display: flex;
-    justify-content: center; }
-    .footer .footer-content .footer-icons .icon {
-      margin: 50px 15px 100px;
-      font-size: 20px; }
-
-.cookie {
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  position: fixed;
-  bottom: 0;
-  padding: 0 20px; }
-  @media screen and (max-width: 600px) {
-    .cookie {
-      flex-direction: column;
-      padding: 10px 20px;
-      height: auto;
-      text-align: center; } }
-  .cookie small {
-    font-size: 11px; }
-    @media screen and (max-width: 600px) {
-      .cookie small {
-        font-size: 10px; } }
-  .cookie button {
-    padding: 10px 40px;
-    background: black;
-    color: white;
-    margin-left: 25px;
-    font-size: 10px; }
-    .cookie button:hover {
-      cursor: pointer; }
-    @media screen and (max-width: 600px) {
-      .cookie button {
-        padding: 5px 20px;
-        font-size: 8px;
-        margin: 10px; } }
-
-/*# sourceMappingURL=app.css.map */
+Backtrace:
+/Users/tode/Desktop/playground-test/scss/partials/_slider.scss:4
+/Users/tode/Desktop/playground-test/scss/app.scss:3
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1090:in `rescue in block in find_encoding_error'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1087:in `block in find_encoding_error'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `each'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `each_with_index'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `find_encoding_error'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:814:in `check_sass_encoding'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:444:in `check_encoding!'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:400:in `_to_tree'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:321:in `to_tree'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:323:in `block in visit_import'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `block in with_import'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:88:in `with_import'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:322:in `visit_import'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:135:in `with_frame'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/stack.rb:79:in `with_base'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
+/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
+/Applications/MAMP/Library/bin/sass:22:in `load'
+/Applications/MAMP/Library/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE2\"\A         on line 4 of /Users/tode/Desktop/playground-test/scss/partials/_slider.scss\A         from line 3 of /Users/tode/Desktop/playground-test/scss/app.scss\A \A 1: .slider{\A 2: \A 3:     .slick-prev::before {\A 4:         content: \"‹\";\A 5:     }\A 6: \A 7: \A 8:     .slider-img{\A 9:         width: 100%;"; }

@@ -5,12 +5,24 @@
   margin-top: -5px;
   position: relative;
   z-index: 100; }
+  @media screen and (max-width: 775px) {
+    .tab {
+      padding: 75px 3%; } }
+  @media screen and (max-width: 775px) {
+    .tab {
+      flex-direction: column; } }
+  @media screen and (max-width: 440px) {
+    .tab {
+      padding: 0; } }
   .tab .tab-title {
     width: 35%; }
     @media screen and (max-width: 600px) {
       .tab .tab-title {
-        width: 90%;
+        width: 100%;
         justify-content: center; } }
+    @media screen and (max-width: 440px) {
+      .tab .tab-title {
+        width: 100%; } }
     .tab .tab-title .tab-name {
       width: 100%;
       padding: 7% 15%;
@@ -33,7 +45,7 @@
     overflow-y: auto; }
     @media screen and (max-width: 600px) {
       .tab .tab-text {
-        display: none; } }
+        width: 100%; } }
     .tab .tab-text p {
       font-size: 14px;
       line-height: 1.5; }
