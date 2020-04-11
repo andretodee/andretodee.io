@@ -46,16 +46,16 @@
             background-position: center;
 
             &.first{
-                background-image: url(/Users/tode/Desktop/playground-project/images/card-play-harder.png);
+                background-image: url('images/card-play-harder.png');
             }
 
             &.second{
-                background-image: url(/Users/tode/Desktop/playground-project/images/card-simplicity.png);
+                background-image: url('images/card-simplicity.png');
                 background-position: left;
             }
 
             &.third{
-                background-image: url(/Users/tode/Desktop/playground-project/images/card-innovation.png);
+                background-image: url('images/card-innovation.png');
             }
         }
 

@@ -1,0 +1,65 @@
+.read-more {
+  padding: 75px 10%;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: space-between; }
+  @media screen and (max-width: 1150px) {
+    .read-more {
+      padding: 75px 4%; } }
+  @media screen and (max-width: 1024px) {
+    .read-more {
+      flex-direction: column;
+      align-items: center; } }
+  @media screen and (max-width: 440px) {
+    .read-more {
+      padding: 20px 0 0 0; } }
+  .read-more .card {
+    height: 353px;
+    width: 31%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    @media screen and (max-width: 1024px) {
+      .read-more .card {
+        width: 50%;
+        margin: 20px; } }
+    @media screen and (max-width: 768px) {
+      .read-more .card {
+        width: 80%;
+        margin: 20px; } }
+    @media screen and (max-width: 440px) {
+      .read-more .card {
+        width: 100%;
+        margin: 0; } }
+    .read-more .card .card-top {
+      width: 100%;
+      height: 25%;
+      background-position: center; }
+      .read-more .card .card-top.first {
+        background-image: url("images/card-play-harder.png"); }
+      .read-more .card .card-top.second {
+        background-image: url("images/card-simplicity.png");
+        background-position: left; }
+      .read-more .card .card-top.third {
+        background-image: url("images/card-innovation.png"); }
+    .read-more .card .card-center {
+      height: 60%;
+      padding: 40px 35px; }
+      .read-more .card .card-center p {
+        text-align: center;
+        line-height: 1.5;
+        max-height: 90%;
+        overflow-y: auto; }
+    .read-more .card .card-bottom {
+      background: black;
+      height: 15%;
+      display: flex;
+      text-decoration: none; }
+      .read-more .card .card-bottom p {
+        color: white;
+        margin: auto; }
+      .read-more .card .card-bottom:hover p {
+        border-bottom: 1px solid white; }
+
+/*# sourceMappingURL=_cards.css.map */

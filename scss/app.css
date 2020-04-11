@@ -195,12 +195,12 @@ header, main {
       height: 25%;
       background-position: center; }
       .read-more .card .card-top.first {
-        background-image: url(/Users/tode/Desktop/playground-project/images/card-play-harder.png); }
+        background-image: url("images/card-play-harder.png"); }
       .read-more .card .card-top.second {
-        background-image: url(/Users/tode/Desktop/playground-project/images/card-simplicity.png);
+        background-image: url("images/card-simplicity.png");
         background-position: left; }
       .read-more .card .card-top.third {
-        background-image: url(/Users/tode/Desktop/playground-project/images/card-innovation.png); }
+        background-image: url("images/card-innovation.png"); }
     .read-more .card .card-center {
       height: 60%;
       padding: 40px 35px; }
@@ -334,10 +334,6 @@ header, main {
     .tab .tab-text p {
       font-size: 14px;
       line-height: 1.5; }
-  .tab .tab-text.visible {
-    display: block; }
-  .tab .tab-text.hidden {
-    display: none; }
 
 #contact-us {
   padding: 90px 15%;
