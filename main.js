@@ -79,11 +79,8 @@ function slider(){
 
             var textArray = json.item.content;
             var finalText = textArray.toString();
+            $('.tab-text > p').html(finalText);
 
-            setTimeout(function(){
-                $('.loader').show();
-                $('.tab-text > p').html(finalText);
-            }, 1500);
         });
     };
 
@@ -109,7 +106,10 @@ function init(){
     });
 
     $('.tab-one').click(function(){
-        getData('tab1');
+        setTimeout(function(){
+            $('.loader').show();
+            getData('tab1');
+        }, 1500);
     });
 
     $('.tab-two').click(function(){
