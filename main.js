@@ -152,7 +152,7 @@ function slider(){
     // }
 
     function getData(path){
-        $.getJSON("../ajax-json/" + path + ".json", function(json) {
+        $.getJSON("./ajax-json/" + path + ".json", function(json) {
             console.log('test');
             console.log(json);
             var textArray = json.item.content;
