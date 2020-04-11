@@ -81,6 +81,7 @@ function slider(){
             var finalText = textArray.toString();
 
             setTimeout(function(){
+                $('.loader').show();
                 $('.tab-text > p').html(finalText);
             }, 1500);
         });

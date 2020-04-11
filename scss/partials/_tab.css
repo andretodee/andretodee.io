@@ -52,5 +52,7 @@
       @media screen and (max-width: 1024px) {
         .tab .tab-text p {
           font-size: 12px; } }
+    .tab .tab-text .loader {
+      display: none; }
 
 /*# sourceMappingURL=_tab.css.map */
