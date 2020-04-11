@@ -1,38 +1,55 @@
-/*
-Error: Invalid US-ASCII character "\xE2"
-        on line 4 of /Users/tode/Desktop/playground-test/scss/partials/_slider.scss
+.slider .slider-img {
+  width: 100%;
+  position: relative; }
+  .slider .slider-img img {
+    width: 100%;
+    height: auto;
+    min-height: 460px; }
+  .slider .slider-img .slider-text {
+    position: absolute;
+    top: 55%;
+    left: 18%;
+    transform: translateY(-55%);
+    width: 16%; }
+    @media screen and (max-width: 600px) {
+      .slider .slider-img .slider-text {
+        width: 35%; } }
+    .slider .slider-img .slider-text h2 {
+      color: white;
+      font-size: 70px;
+      line-height: 1; }
+      @media screen and (max-width: 800px) {
+        .slider .slider-img .slider-text h2 {
+          font-size: 50px; } }
+    .slider .slider-img .slider-text p {
+      color: lightgrey;
+      margin-top: 30px;
+      line-height: 1.7;
+      font-size: 14px; }
+      @media screen and (max-width: 1024px) {
+        .slider .slider-img .slider-text p {
+          font-size: 12px; } }
+.slider .slick-arrow {
+  position: absolute;
+  z-index: 10; }
+.slider .slick-prev {
+  left: 15px; }
+.slider .slick-next {
+  right: 15px; }
+.slider .slick-dots {
+  position: absolute;
+  bottom: 30px; }
+  .slider .slick-dots li {
+    margin: 0 5px; }
+    .slider .slick-dots li button::before {
+      font-size: 10px;
+      color: white; }
+  .slider .slick-dots li.slick-active button:before {
+    color: white; }
+.slider .slick-slide {
+  height: auto; }
 
-1: .slider{
-2: 
-3:     body > main > div.container.slider.slick-initialized.slick-slider.slick-dotted > button.slick-prev.slick-arrow::before {
-4:         content: '‹';
-5:     }
-6: 
-7: 
-8:     .slider-img{
-9:         width: 100%;
+.slick-dotted.slick-slider {
+  margin-bottom: 0 !important; }
 
-Backtrace:
-/Users/tode/Desktop/playground-test/scss/partials/_slider.scss:4
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1090:in `rescue in block in find_encoding_error'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1087:in `block in find_encoding_error'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `each'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `each_with_index'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:1086:in `find_encoding_error'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/util.rb:814:in `check_sass_encoding'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:444:in `check_encoding!'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:400:in `_to_tree'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-/Applications/MAMP/Library/lib/ruby/gems/2.3.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
-/Applications/MAMP/Library/bin/sass:22:in `load'
-/Applications/MAMP/Library/bin/sass:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid US-ASCII character \"\xE2\"\A         on line 4 of /Users/tode/Desktop/playground-test/scss/partials/_slider.scss\A \A 1: .slider{\A 2: \A 3:     body > main > div.container.slider.slick-initialized.slick-slider.slick-dotted > button.slick-prev.slick-arrow::before {\A 4:         content: '‹';\A 5:     }\A 6: \A 7: \A 8:     .slider-img{\A 9:         width: 100%;"; }
+/*# sourceMappingURL=_slider.css.map */
