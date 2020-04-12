@@ -62,9 +62,7 @@
         background: white;
         padding: 4% 8%;
         overflow-y: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        position: relative;
 
         @media screen and (max-width: 600px){
             width: 100%;
@@ -82,6 +80,11 @@
 
         .loader{
             display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: spin 4s linear infinite;
         }
     }
 }

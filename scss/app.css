@@ -351,9 +351,7 @@ header, main, footer {
     background: white;
     padding: 4% 8%;
     overflow-y: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
+    position: relative; }
     @media screen and (max-width: 600px) {
       .tab .tab-text {
         width: 100%; } }
@@ -364,7 +362,12 @@ header, main, footer {
         .tab .tab-text p {
           font-size: 12px; } }
     .tab .tab-text .loader {
-      display: none; }
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: spin 4s linear infinite; }
 
 #contact-us {
   padding: 90px 15%;
