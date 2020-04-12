@@ -1,0 +1,79 @@
+.banner {
+  position: relative;
+  margin-top: -5px; }
+  @media screen and (max-width: 600px) {
+    .banner {
+      margin-top: 0; } }
+  .banner .banner-img {
+    width: 100%; }
+    .banner .banner-img img {
+      width: 100%; }
+  .banner .banner-text-background {
+    width: 42%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center; }
+    @media screen and (max-width: 775px) {
+      .banner .banner-text-background {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        border-bottom: 1px solid lightgrey;
+        margin-top: -5px; } }
+    .banner .banner-text-background .banner-text {
+      width: 37%;
+      margin: 0 10%; }
+      .banner .banner-text-background .banner-text h2 {
+        font-size: 70px;
+        line-height: 1; }
+        @media screen and (max-width: 600px) {
+          .banner .banner-text-background .banner-text h2 {
+            font-size: 50px; } }
+      .banner .banner-text-background .banner-text p {
+        margin: 25px 0;
+        line-height: 1.7;
+        font-size: 14px; }
+        @media screen and (max-width: 1024px) {
+          .banner .banner-text-background .banner-text p {
+            font-size: 12px; } }
+      .banner .banner-text-background .banner-text .banner-button {
+        padding: 15px 20px;
+        background: transparent; }
+        @media screen and (max-width: 1024px) {
+          .banner .banner-text-background .banner-text .banner-button {
+            padding: 10px 15px; } }
+        .banner .banner-text-background .banner-text .banner-button a {
+          text-decoration: none;
+          color: white;
+          font-size: 14px; }
+          @media screen and (max-width: 1024px) {
+            .banner .banner-text-background .banner-text .banner-button a {
+              font-size: 11px; } }
+  .banner .banner-text-background.right {
+    background: black;
+    color: white;
+    right: 0;
+    justify-content: flex-start; }
+    .banner .banner-text-background.right .banner-text p {
+      color: lightgrey; }
+    .banner .banner-text-background.right .banner-text .banner-button {
+      border: 1px solid white; }
+      .banner .banner-text-background.right .banner-text .banner-button a {
+        color: white; }
+  .banner .banner-text-background.left {
+    background: white;
+    color: black;
+    left: 0;
+    justify-content: flex-end; }
+    .banner .banner-text-background.left .banner-text {
+      text-align: right; }
+      .banner .banner-text-background.left .banner-text p {
+        color: black; }
+      .banner .banner-text-background.left .banner-text .banner-button {
+        border: 1px solid black; }
+        .banner .banner-text-background.left .banner-text .banner-button a {
+          color: black; }
+
+/*# sourceMappingURL=_banner.css.map */

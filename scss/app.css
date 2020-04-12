@@ -231,6 +231,9 @@ header, main, footer {
 .banner {
   position: relative;
   margin-top: -5px; }
+  @media screen and (max-width: 600px) {
+    .banner {
+      margin-top: 0; } }
   .banner .banner-img {
     width: 100%; }
     .banner .banner-img img {
@@ -325,9 +328,6 @@ header, main, footer {
       .tab .tab-title {
         width: 100%;
         justify-content: center; } }
-    @media screen and (max-width: 440px) {
-      .tab .tab-title {
-        width: 100%; } }
     .tab .tab-title .tab-name {
       width: 100%;
       padding: 7% 15%;
@@ -337,10 +337,13 @@ header, main, footer {
         .tab .tab-title .tab-name p {
           font-size: 12px; } }
       .tab .tab-title .tab-name.active {
-        background: grey;
+        background: black;
         color: lightgrey; }
         .tab .tab-title .tab-name.active .fa-angle-up {
           transform: rotate(180deg); }
+        @media screen and (max-width: 440px) {
+          .tab .tab-title .tab-name.active {
+            background: grey; } }
       .tab .tab-title .tab-name .fa-angle-down {
         display: none; }
   .tab .tab-text {

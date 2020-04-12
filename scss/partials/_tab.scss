@@ -26,10 +26,6 @@
             justify-content: center;
         }
 
-        @media screen and (max-width: 440px){
-            width: 100%;
-        }
-
         .tab-name{
             width: 100%;
             padding: 7% 15%;
@@ -43,11 +39,15 @@
             }
 
             &.active{
-                background: grey;
+                background: black;
                 color: lightgrey;
 
                 .fa-angle-up{
                     transform: rotate(180deg);
+                }
+
+                @media screen and (max-width: 440px){
+                    background: grey;
                 }
             }
 

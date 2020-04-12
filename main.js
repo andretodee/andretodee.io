@@ -75,15 +75,33 @@ function slider(){
     }
 
     function getData(path){
-        $.getJSON("./ajax-json/" + path + ".json", function(json) {
+        // $.getJSON("./ajax-json/" + path + ".json", function(json) {
+        //
+        //     var textArray = json.item.content;
+        //     var finalText = textArray.toString();
+        //
+        //     setTimeout(function(){
+        //         $('.tab-text > p').html(finalText);
+        //     }, 1500);
+        // });
 
-            var textArray = json.item.content;
-            var finalText = textArray.toString();
+        $.ajax({
+            url: "./ajax-json/" + path + ".json",
+            dataType: "json",
+            beforeSend: function() {
+                $('.loader').show();
+            },
+            success: function(data) {
+                var textArray = data.item.content;
+                var finalText = textArray.toString();
 
-            setTimeout(function(){
-                $('.tab-text > p').html(finalText);
-            }, 1500);
-        });
+                setTimeout(function(){
+                    $('.tab-text > p').html(finalText);
+                }, 1500);
+            },
+            complete: function() {
+                $('.loader').hide();
+            }});
     };
 
     function animatedScroll(){
@@ -107,7 +125,7 @@ function init(){
         validate();
     });
 
-    $('.tab-one').click(function(){    
+    $('.tab-one').click(function(){
         getData('tab1');
     });
 
