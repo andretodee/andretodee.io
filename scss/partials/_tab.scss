@@ -63,7 +63,7 @@
         padding: 4% 8%;
         overflow-y: auto;
         position: relative;
-        min-height: 100px;
+        min-height: 80px;
 
         @media screen and (max-width: 600px){
             width: 100%;
@@ -90,7 +90,7 @@
 
         @keyframes spin {
             0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            100% { transform: rotate(360deg); }        
         }
     }
 }

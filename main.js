@@ -100,14 +100,15 @@ function getData(path){
 };
 
 // FUNCTION FOR ANIMATED DOM ON SCROLLING
-// function animatedScroll(){
-//     ScrollReveal().reveal('.slider *, .read-more *, .banner *, .tab *, #contact-us *, .footer  *, cookie *',{
-//         duration: 250,
-//         easing: 'ease-in',
-//         interval: 70
-//     });
-// };
+function animatedScroll(){
+    ScrollReveal().reveal('.slider *, .read-more *, .banner *, .tab *, #contact-us *, .footer  *, cookie *',{
+        duration: 250,
+        easing: 'ease-in',
+        interval: 70
+    });
+};
 
+// FUNCTION THAT CALLS ALL OTHERS FUNCTIONS
 function init(){
     slider();
     navabarScroll();
@@ -115,7 +116,7 @@ function init(){
     tabActive();
     mobileMenu();
     getData('tab1');
-        // animatedScroll();
+    animatedScroll();
 
     $('.invia').click(function(){
         validate();
@@ -134,5 +135,5 @@ function init(){
     });
 };
 
-
+// INIT FUNCTION CALLED INTO LOADED DOM
 $(document).ready(init);
