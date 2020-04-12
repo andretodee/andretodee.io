@@ -89,16 +89,16 @@ function getData(path){
         success: function(data) {
             var textArray = data.item.content;
             var finalText = textArray.toString();
-
-            setTimeout(function(){
-                $('.tab-text > p').html(finalText);
-            }, 1500);
+            $('.tab-text > p').html(finalText);
+            // setTimeout(function(){
+            //     $('.tab-text > p').html(finalText);
+            // }, 1000);
         },
         complete: function() {
             setTimeout(function(){
                 $('.loader').hide();
                 $('.tab-text > p').show();
-            }, 1500);
+            }, 1000);
         }});
 };
 
