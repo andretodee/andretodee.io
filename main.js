@@ -114,7 +114,7 @@ function init(){
     tabActive();
     mobileMenu();
     getData('tab1');
-    animatedScroll();
+    // animatedScroll();
 
     $('.invia').click(function(){
         validate();
