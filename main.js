@@ -90,9 +90,6 @@ function getData(path){
             var textArray = data.item.content;
             var finalText = textArray.toString();
             $('.tab-text > p').html(finalText);
-            // setTimeout(function(){
-            //     $('.tab-text > p').html(finalText);
-            // }, 1000);
         },
         complete: function() {
             setTimeout(function(){
