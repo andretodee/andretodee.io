@@ -88,10 +88,10 @@ function getData(path){
         success: function(data) {
             var textArray = data.item.content;
             var finalText = textArray.toString();
-            $('.tab-text > p').html(finalText);
-            // setTimeout(function(){
-            //
-            // }, 1500);
+
+            setTimeout(function(){
+                $('.tab-text > p').html(finalText);
+            }, 1500);
         },
         complete: function() {
             $('.loader').hide();
