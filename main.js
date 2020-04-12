@@ -84,6 +84,7 @@ function getData(path){
         dataType: "json",
         beforeSend: function() {
             $('.loader').show();
+            $('.tab-text > p').hide();
         },
         success: function(data) {
             var textArray = data.item.content;
@@ -93,9 +94,10 @@ function getData(path){
                 $('.tab-text > p').html(finalText);
             }, 1500);
         },
-        complete: function() {        
+        complete: function() {
             setTimeout(function(){
                 $('.loader').hide();
+                $('.tab-text > p').show();
             }, 1500);
         }});
 };
