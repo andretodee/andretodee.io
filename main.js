@@ -1,3 +1,4 @@
+// FUNCTION FOR SLIDER USING SLICKJS
 function slider(){
     $('.slider').slick({
       arrows:true,
@@ -17,100 +18,94 @@ function slider(){
     });
 };
 
-  function navabarScroll(){
-      $(window).on('scroll', function(e) {
-            st = $(this).scrollTop();
-            if (st > 80) {
-                $('.navbar').addClass('scrolled');
-            } else {
-                $('.navbar').removeClass('scrolled');
+// FUNCTION TO CHANGE THE NAVBAR AFTER SCROLL
+function navabarScroll(){
+  $(window).on('scroll', function(e) {
+        st = $(this).scrollTop();
+        if (st > 80) {
+            $('.navbar').addClass('scrolled');
+        } else {
+            $('.navbar').removeClass('scrolled');
 
-            }
-      });
-  };
-
-  function closeCookie(){
-      $('.cookie-button').click(function(){
-         $('.cookie').hide();
-     });
-  };
-
-  function tabActive(){
-
-        $('.tab-name').click(function(){
-
-            var selectedTab = $(this);
-            $('.tab-name').removeClass('active');
-            selectedTab.addClass('active');
-        });
-  };
-
-  function mobileMenu(){
-      $('.fa-bars').click(function(){
-          $('.drop-down-menu').fadeToggle();
-          $('.logo').toggle();
-          $('.hamburger-menu').toggle();
-      });
-  };
-
-  function validate() {
-
-        var email = $('.email').val();
-        console.log(email);
-        if (email == "") {
-          alert("email must be filled out");
-     // else if (email) {
-     // }
-          return false;
         }
-        email = '';
+  });
+};
 
-        var message = $('.message').val();
-        console.log(message);
-        if (message == "") {
-          alert("message must be filled out");
-          return false;
-        }
-        message = '';
+// FUNCTION TO CLOSE THE COOKIE'S SECTION
+function closeCookie(){
+  $('.cookie-button').click(function(){
+     $('.cookie').hide();
+ });
+};
+
+// FUNCTION TO CHANGE THE ACTIVE CLASS ON CLICK
+function tabActive(){
+    $('.tab-name').click(function(){
+        var selectedTab = $(this);
+        $('.tab-name').removeClass('active');
+        selectedTab.addClass('active');
+    });
+};
+
+// FUNCTION TO OPEN AND CLOSE THE MENU FOR MOBILE
+function mobileMenu(){
+  $('.fa-bars').click(function(){
+      $('.drop-down-menu').fadeToggle();
+      $('.logo').toggle();
+      $('.hamburger-menu').toggle();
+  });
+};
+
+// FUNCTION TO VALIDATE FORM'S INFORMATIONS
+function validate() {
+    var email = $('.email').val();
+    console.log(email);
+    if (email == "") {
+      alert("email must be filled out");
+ // else if (email) {
+ // }
+      return false;
     }
+    email = '';
 
-    function getData(path){
-        // $.getJSON("./ajax-json/" + path + ".json", function(json) {
-        //
-        //     var textArray = json.item.content;
-        //     var finalText = textArray.toString();
-        //
-        //     setTimeout(function(){
-        //         $('.tab-text > p').html(finalText);
-        //     }, 1500);
-        // });
+    var message = $('.message').val();
+    console.log(message);
+    if (message == "") {
+      alert("message must be filled out");
+      return false;
+    }
+    message = '';
+}
 
-        $.ajax({
-            url: "./ajax-json/" + path + ".json",
-            dataType: "json",
-            beforeSend: function() {
-                $('.loader').show();
-            },
-            success: function(data) {
-                var textArray = data.item.content;
-                var finalText = textArray.toString();
+// FUNCTION TO GET TEXT FROM AJAX CALL
+function getData(path){
+    $.ajax({
+        url: "./ajax-json/" + path + ".json",
+        dataType: "json",
+        beforeSend: function() {
+            $('.loader').show();
+        },
+        success: function(data) {
+            var textArray = data.item.content;
+            var finalText = textArray.toString();
+            $('.tab-text > p').html(finalText);
+            // setTimeout(function(){
+            //
+            // }, 1500);
+        },
+        complete: function() {
+            $('.loader').hide();
+        }});
+};
 
-                setTimeout(function(){
-                    $('.tab-text > p').html(finalText);
-                }, 1500);
-            },
-            complete: function() {
-                $('.loader').hide();
-            }});
-    };
-
-    function animatedScroll(){
-        ScrollReveal().reveal('.slider *, .read-more *, .banner *, .tab *, #contact-us *, .footer  *, cookie *',{
-            duration: 250,
-            easing: 'ease-in',
-            interval: 70
-        });
-    };
+//
+function animatedScroll(){
+    ScrollReveal().reveal('.slider *, .read-more *, .banner *, .tab *, #contact-us *, .footer  *, cookie *',{
+        duration: 250,
+        easing: 'ease-in',
+        interval: 70
+    });
+};
 
 function init(){
     slider();
