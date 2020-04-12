@@ -93,8 +93,10 @@ function getData(path){
                 $('.tab-text > p').html(finalText);
             }, 1500);
         },
-        complete: function() {
-            $('.loader').hide();
+        complete: function() {        
+            setTimeout(function(){
+                $('.loader').hide();
+            }, 1500);
         }});
 };
 
