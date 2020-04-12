@@ -98,14 +98,14 @@ function getData(path){
         }});
 };
 
-//
-function animatedScroll(){
-    ScrollReveal().reveal('.slider *, .read-more *, .banner *, .tab *, #contact-us *, .footer  *, cookie *',{
-        duration: 250,
-        easing: 'ease-in',
-        interval: 70
-    });
-};
+// FUNCTION FOR ANIMATED DOM ON SCROLLING
+// function animatedScroll(){
+//     ScrollReveal().reveal('.slider *, .read-more *, .banner *, .tab *, #contact-us *, .footer  *, cookie *',{
+//         duration: 250,
+//         easing: 'ease-in',
+//         interval: 70
+//     });
+// };
 
 function init(){
     slider();
