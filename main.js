@@ -81,11 +81,12 @@ function validate() {
       alert("message must be filled out");
       return false;
     }
-    message == '';
-    name == '';
-    lastName == '';
-    email == '';
-}
+
+    $('.name').val('');
+    $('.last-name').val('');
+    $('.email').val('');
+    $('.message').val('');
+};
 
 // FUNCTION TO GET TEXT FROM AJAX CALL
 function getData(path){
