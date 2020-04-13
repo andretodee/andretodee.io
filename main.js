@@ -58,15 +58,22 @@ function mobileMenu(){
 
 // FUNCTION TO VALIDATE FORM'S INFORMATIONS
 function validate() {
+    var name = $('.name').val();
+    console.log(name);
+    var lastName = $('.last-name').val();
+    console.log(lastName);
     var email = $('.email').val();
     console.log(email);
     if (email == "") {
       alert("email must be filled out");
- // else if (email) {
- // }
       return false;
+    } else if (email.indexOf('@') < 0) {
+        alert("email must contain '@'");
+        return false;
+    } else if (email.indexOf('.') < 0) {
+        alert("email must contain '.'");
+        return false;
     }
-    email = '';
 
     var message = $('.message').val();
     console.log(message);
@@ -74,7 +81,10 @@ function validate() {
       alert("message must be filled out");
       return false;
     }
-    message = '';
+    message == '';
+    name == '';
+    lastName == '';
+    email == '';
 }
 
 // FUNCTION TO GET TEXT FROM AJAX CALL
